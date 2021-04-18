@@ -8,6 +8,21 @@ function PokedexList() {
   const [currPage, setCurrPage] = useState(apiDefault);
   const [nextPage, setNextPage] = useState([]);
   const [prevPage, setPrevPage] = useState([]);
+  const [searchedName, setSearchedName] = useState('');
+  const handleSearch = (pkmnName) => {
+    const nameToLower = pkmnName.toLowerCase();
+    setSearchedName(nameToLower);
+  };
+  const handleSubmit = () => {
+    axios
+      .get(`${apiDefault}${searchedName}`)
+      .then((result) => setPokemons([result.data]))
+      .catch((err) => {
+        if (err.response.data === 'Not Found') {
+          alert("Ce nom de pokémon n'existe pas");
+        }
+      });
+  };
   useEffect(() => {
     axios
       .get(currPage)
@@ -35,6 +50,13 @@ function PokedexList() {
             ←
           </button>
         )}
+        <input
+          placeholder="searchbar"
+          onChange={(e) => handleSearch(e.target.value)}
+        />
+        <button type="submit" onClick={() => handleSubmit()}>
+          GOOOOO
+        </button>
         {nextPage && (
           <button
             className="pokedex-button"
