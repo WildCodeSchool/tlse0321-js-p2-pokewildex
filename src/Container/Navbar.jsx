@@ -6,14 +6,12 @@ import imgVersus from './images/icons/versus.png';
 import imgCap from './images/icons/cap.png';
 import imgBalance from './images/icons/balance.png';
 import imgLogo from './images/logo.png';
-import SearchBar from '../Components/SearchBar';
 
 function Navbar() {
   return (
     <div className="navbar">
       <div className="sidebar">
         <img className="logo" src={imgLogo} alt="" />
-        <SearchBar />
         <ul>
           <li>
             <Link to="/PokedexList">
