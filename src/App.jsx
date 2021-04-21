@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './Container/Navbar';
-import PokedexList from './Components/PokedexList';
-import Comparator from './Components/Comparator';
-import RandomTeam from './Components/RandomTeam';
-import StaffList from './Components/StaffList';
+import PokedexList from './components/PokedexList';
+import Comparator from './components/Comparator';
+import RandomTeam from './components/RandomTeam';
+import StaffList from './components/StaffList';
 import './App.css';
 import Header from './Container/Header';
 

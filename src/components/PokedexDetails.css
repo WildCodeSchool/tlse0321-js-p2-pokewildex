@@ -15,13 +15,13 @@
   text-decoration: none;
   outline: none;
   color: rgb(140, 75, 75);
-  background: linear-gradient(#ffA385,#fc6852);
+  background: linear-gradient(#ffa385, #fc6852);
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
 }
 .pokedex-button:hover {
-  background-color: #ffA385
+  background-color: #ffa385;
 }
 .pokedex-button:active {
   background-color: #fc6852;
@@ -33,7 +33,7 @@
   position: absolute;
   top: 50%;
   left: 70%;
-  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 /*PROPRIETY CARD*/
 .pokedex-card {
@@ -81,7 +81,6 @@
   text-transform: uppercase;
   font-weight: bold;
   font-size: 20px;
-  
 }
 .id {
   font-size: 18px;
