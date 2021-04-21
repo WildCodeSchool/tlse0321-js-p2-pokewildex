@@ -1,0 +1,21 @@
+.loading-screen {
+  text-align: center;
+  margin: 20px;
+  position: absolute;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .load-pokeball {
+    width: 150px;
+    animation: spin infinite 1s linear;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
