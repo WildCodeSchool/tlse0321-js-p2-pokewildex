@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Navbar from './Container/Navbar';
+import Navbar from './container/Navbar';
 import PokedexList from './components/PokedexList';
 import Comparator from './components/Comparator';
 import RandomTeam from './components/RandomTeam';
 import StaffList from './components/StaffList';
 import './App.css';
-import Header from './Container/Header';
+import Header from './container/Header';
 
 function App() {
   return (
