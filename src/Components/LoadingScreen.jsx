@@ -1,7 +1,7 @@
 import imgPokeBall from '../Container/images/icons/poke-ball.png';
 import './LoadingScreen.css';
 
-function LoadingElement() {
+function LoadingScreen() {
   return (
     <div className="loading-screen">
       <img className="load-pokeball" src={imgPokeBall} alt="pokeball" />
@@ -10,4 +10,4 @@ function LoadingElement() {
   );
 }
 
-export default LoadingElement;
+export default LoadingScreen;
