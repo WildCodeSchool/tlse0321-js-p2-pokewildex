@@ -3,7 +3,7 @@ import LoadingElement from './LoadingElement';
 import LoadingScreen from './LoadingScreen';
 import './PokedexDetails.css';
 import fetchPokemonForPokedex from '../utils/fetchPokemonForPokedex';
-import colorTypes from '../constants/colorTypes';
+import setColorTypes from '../utils/setColorTypes';
 
 function PokedexDetails({ pokemonId }) {
   const [pokemon, setPokemon] = useState({});
@@ -14,10 +14,7 @@ function PokedexDetails({ pokemonId }) {
 
   useEffect(() => {
     fetchPokemonForPokedex(pokemonId, setPokemon);
-    if (pokemon.types) {
-      const newColorTypes = pokemon.types.map((t) => colorTypes[t.type.name]);
-      setColorsForCard(newColorTypes);
-    }
+    setColorTypes(pokemon, setColorsForCard);
   }, [id, pokemonId]);
 
   return (
